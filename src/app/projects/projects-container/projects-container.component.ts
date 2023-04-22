@@ -12,6 +12,7 @@ export class ProjectsContainerComponent implements OnInit {
   projects: Project[] = [];
   errorMessage: string = '';
   loading: boolean = false;
+  filterBy: string=''
 
   constructor(private projectService: ProjectService) {}
 

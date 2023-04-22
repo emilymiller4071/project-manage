@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="cols-sm" *ngFor="let project of projects">
+    <div class="cols-sm" *ngFor="let project of projects | filter : filterBy">
         <app-project-banner></app-project-banner>
         <app-project-card [project]="project" (edit)="onEdit($event)"
         *ngIf="project !== editingProject">

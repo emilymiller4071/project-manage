@@ -4,6 +4,7 @@ import { TruncateStringPipe } from './truncate-string.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     TruncateStringPipe

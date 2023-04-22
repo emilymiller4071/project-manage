@@ -1,4 +1,5 @@
 <h1>Projects</h1>
+<input type="text" [(ngModel)]="filterBy"/>
 <div *ngIf="loading" class="center-page">
     <span class="spinner primary"></span>
     <p>Loading... </p>
@@ -12,6 +13,8 @@
         </section>
     </div>
 </div>
-<app-project-list [projects]="projects"
+<app-project-list 
+    [filterBy]="filterBy"
+    [projects]="projects"
     (saveListItem)="onSaveListItem($event)">
 </app-project-list>

@@ -7,11 +7,12 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectFormComponent } from './project-form/project-form.component';
 import { ProjectBannerComponent } from './project-banner/project-banner.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationErrorsComponent } from '../shared/validation-errors/validation-errors.component';
 import { ProjectDetailContainerComponent } from './project-detail-container/project-detail-container.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { SharedModule } from '../shared/shared.module';
+import { FilterPipe } from '../shared/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { SharedModule } from '../shared/shared.module';
     ProjectBannerComponent,
     ValidationErrorsComponent,
     ProjectDetailContainerComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [ProjectsContainerComponent]
 })
