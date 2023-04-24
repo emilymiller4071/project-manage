@@ -46,6 +46,16 @@ export class ProjectsContainerComponent implements OnInit {
       },
       error => (this.errorMessage = error)
     );
-  
   }
+
+  onDeleteProject(event: number) {
+    console.log(`Just about to delete id $(event)`);
+    this.projectService.delete(event).subscribe(
+      data => {
+        console.log(`Successfully deleted id ${event}`)
+      },
+      error => this.errorMessage = error
+    )
+  }
+
 }
